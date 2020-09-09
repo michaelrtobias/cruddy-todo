@@ -44,7 +44,7 @@ exports.getNextUniqueId = (callback) => {
 
     var newCount = fileData + 1;
     writeCounter(newCount, (err, zeroPaddedNumber) => {
-      callback(zeroPaddedNumber);
+      callback(err, zeroPaddedNumber);
       console.log('Heres your ZPN:' + zeroPaddedNumber);
     });
   });
